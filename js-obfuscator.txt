@@ -1,0 +1,62 @@
+প্রথমে আপনার JS করা আলাদা আলাদা ফাইলগুলো সব একসাথে নিচের কোডের মধ্যে লিংকগুলো কপি পেস্ট করতে হবে।
+তারপর নিচের কোডটি আলাদা একটি JS ফাইল তৈরি করে সেভ করতে হবে।
+
+function callAll(jsfiles) {
+    var src = document.createElement("script");
+    src.setAttribute("type", "text/javascript");
+    src.setAttribute("src", jsfiles);
+    document.getElementsByTagName("head")[0].appendChild(src);
+}
+callAll("/font-converter/bijoy2uni.js");
+callAll("/font-converter/uni2bijoy.js");
+callAll("/font-converter/common.js");
+
+এরপর
+
+নিচের কোডটি কপি করে 
+function callAll(jsfiles) {
+    var src = document.createElement("script");
+    src.setAttribute("type", "text/javascript");
+    src.setAttribute("src", jsfiles);
+    document.getElementsByTagName("head")[0].appendChild(src);
+}
+callAll("https://cdn.jsdelivr.net/gh/Asikurbd/font-converter/script.js");
+
+নিচের দেয়া এই সাইট থেকে উপরের কোডটা কপি পেস্ট করে কোড Obfuscator করে নিতে হবে।
+https://javascriptobfuscator.com/Javascript-Obfuscator.aspx
+
+তারপর 
+
+<script type="text/javascript">
+এরপর Obfuscator করা কোডটি এর ভিতরে বসাতে হবে।
+</script>
+
+_______________________________________
+
+Css কোডের জন্য
+<script type="text/javascript">
+function callAll(cssfiles) {
+  var src = document.createElement("link");
+  src.setAttribute("rel", "stylesheet");
+  src.setAttribute("type", "text/css");
+  src.setAttribute("href", cssfiles);
+  document.getElementsByTagName("head")[0].appendChild(src);
+}
+callAll("/font-converter/script-2/site.css");
+callAll("/font-converter/script-2/css.css");
+</script>
+
+_______________________________________
+
+HTML কোডের জন্য iframe দিয়ে কোড বসাতে হবে 
+
+<script>
+var quotes = new Array();
+
+quotes[0] = '<iframe src="https://asikurbd.github.io/Files-Upload/youtube-tv.html" height="100%" width="100%" frameBorder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0%;left:0px;right:0px;bottom:0px"></iframe>';
+
+var whichquote = Math.floor(Math.random() * (quotes.length));
+
+document.write(quotes[whichquote]);
+</script>
+_______________________________________
